@@ -1,21 +1,72 @@
 .App {
+  display: flex;
   text-align: center;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 60px;
+  width: 60px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  top: 0px;
+
+  background-color: #282c34;
+  height: 80px;
+  width: 100%;
   font-size: calc(10px + 2vmin);
   color: white;
+
+  z-index: 100;
+}
+
+.App-header > .Header-content {
+  flex-grow: 1;
+}
+
+.App > .App-body {
+  display: flex;
+  flex-direction: row;
+
+  height: 100vh;
+  padding-top: 80px;
+  margin-top: －80px;
+  box-sizing: border-box;
+}
+.App > .App-body > .Nav {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  background-color: #CCC;
+  padding: 16px;
+}
+.App > .App-body > .Nav > a {
+  margin: 4px;
+}
+.App > .App-body > .Nav > a:link,
+.App > .App-body > .Nav > a:visited,
+.App > .App-body > .Nav > a:hover {
+  color: #222222;
+  text-decoration: none;
+  user-select: none;
+}
+.App > .App-body > .Nav > a:hover {
+  text-decoration: underline;
+}
+
+.App > .App-body > .PageContent {
+  flex-grow: 1;
+  padding: 16px;
+}
+
+label {
+  margin: 12px;
 }
 
 .App-link {
